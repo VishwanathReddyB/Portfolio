@@ -4,7 +4,7 @@
     --text-color: #ffffff;
     --secondary-text: #a4a5b8;
     --primary-color: #3a435d;
-    --accent-color: #0071ff;
+    --accent-color: #4d4e50;
     --skill-bg: #23232b;
 }
 
@@ -14,7 +14,7 @@
     --text-color: #06070d;
     --secondary-text: #b5b9cc;
     --primary-color: #aeb5c9;
-    --accent-color: #0071ff;
+    --accent-color: #3d3d3e;
     --skill-bg: #eaeaec;
 }
 
@@ -50,6 +50,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 30px;
+
 }
 
 nav ul li a {
@@ -59,7 +60,8 @@ nav ul li a {
 }
 
 nav a:hover {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: white;
 }
 
 /* Hero Section */
@@ -88,7 +90,7 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: #0097a7;
+    background-color: #3a3a3a;
 }
 
 /* Section Styles */
