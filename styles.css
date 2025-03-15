@@ -1,14 +1,4 @@
 :root {
-    --base-color: white;
-    --base-variant: #e8e9ed;
-    --text-color: #06070d;
-    --secondary-text: #b5b9cc;
-    --primary-color: #aeb5c9;
-    --accent-color: #0071ff;
-    --skill-bg: #eaeaec;
-}
-
-.dark-mode {
     --base-color: #000000;
     --base-variant: #1b1c20;
     --text-color: #ffffff;
@@ -16,6 +6,16 @@
     --primary-color: #3a435d;
     --accent-color: #0071ff;
     --skill-bg: #23232b;
+}
+
+.dark-mode {
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #06070d;
+    --secondary-text: #b5b9cc;
+    --primary-color: #aeb5c9;
+    --accent-color: #0071ff;
+    --skill-bg: #eaeaec;
 }
 
 /* Global Styles */
