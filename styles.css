@@ -186,3 +186,6 @@ footer {
     background-color: var(--accent-color);
     color: white;
 }
+.project-container {
+    transition: all 0.3s ease-in-out;
+}
