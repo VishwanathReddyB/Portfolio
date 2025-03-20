@@ -28,7 +28,6 @@ if (localStorage.getItem('theme') === 'dark') {
 // Event Listeners for the Icons
 lightModeIcon.addEventListener('click', disableDarkMode);
 darkModeIcon.addEventListener('click', enableDarkMode);
-
 function handleResponsive() {
     if (window.matchMedia("(max-width: 768px)").matches) {
         document.querySelector('.minimal-header').style.padding = "15px 5%";

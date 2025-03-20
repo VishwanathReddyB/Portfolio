@@ -1,3 +1,19 @@
+@media (max-width: 768px) {
+    .minimal-header {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}
+
 :root {
     --base-color: #000000;
     --base-variant: #1b1c20;
@@ -25,6 +41,7 @@ body {
     background-color: var(--base-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 70px; 
 }
 
 /* Header Styles */
@@ -137,6 +154,7 @@ h2 {
 
 .contact-info a:hover {
     text-decoration: underline;
+    color:#00c3ff
 }
 
 /* Footer */
@@ -188,4 +206,7 @@ footer {
 }
 .project-container {
     transition: all 0.3s ease-in-out;
+}
+html {
+    scroll-behavior: smooth;
 }
