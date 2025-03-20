@@ -11,8 +11,9 @@
 <body>
     <header class="minimal-header">
         <h1 class="logo">Vishwanath Reddy B</h1>
+        <button class="menu-toggle">☰</button>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -21,6 +22,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        
         <div class="theme-toggle">
             <i class="fas fa-sun" id="light-mode" style="display: none;"></i>
             <i class="fas fa-moon" id="dark-mode"></i>
@@ -160,5 +162,7 @@
         lightModeIcon.addEventListener('click', toggleTheme);
         darkModeIcon.addEventListener('click', toggleTheme);
     </script>
+    <script src="script.js"></script>
+
 </body>
 </html>

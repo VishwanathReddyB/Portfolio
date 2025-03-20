@@ -1,19 +1,46 @@
+/* Hide menu toggle by default */
+.menu-toggle {
+    display: none;
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
-    .minimal-header {
-        flex-direction: column;
-        padding: 10px 5%;
+    /* Show menu toggle only in mobile */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text-color);
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        z-index: 1100;
     }
 
-    nav ul {
+    /* Hide menu by default */
+    .nav-links {
+        display: none; /* FIX: Initially hidden */
         flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul li {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--base-variant);
+        padding: 10px;
         text-align: center;
+        z-index: 1000;
+    }
+
+    /* Show menu when toggled */
+    .nav-links.show {
+        display: flex; /* FIX: Show when active */
     }
 }
 
+
+/* Theme Variables */
 :root {
     --base-color: #000000;
     --base-variant: #1b1c20;
@@ -24,6 +51,7 @@
     --skill-bg: #23232b;
 }
 
+/* Dark Mode Variables */
 .dark-mode {
     --base-color: white;
     --base-variant: #e8e9ed;
@@ -41,7 +69,7 @@ body {
     background-color: var(--base-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
-    padding-top: 70px; 
+    padding-top: 70px;
 }
 
 /* Header Styles */
@@ -58,16 +86,11 @@ body {
     z-index: 100;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
+/* Navigation */
 nav ul {
     display: flex;
     justify-content: center;
     gap: 30px;
-
 }
 
 nav ul li a {
@@ -97,6 +120,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+/* Button Styling */
 .btn {
     background-color: var(--accent-color);
     color: white;
@@ -110,7 +134,7 @@ nav a:hover {
     background-color: #3a3a3a;
 }
 
-/* Section Styles */
+/* Sections */
 .section {
     padding: 60px 10%;
     text-align: center;
@@ -122,6 +146,7 @@ h2 {
     color: var(--text-color);
 }
 
+/* Skill Tags */
 .skill-tags span {
     background-color: var(--skill-bg);
     padding: 10px 18px;
@@ -131,6 +156,7 @@ h2 {
     display: inline-block;
 }
 
+/* Project Cards */
 .project-container {
     display: flex;
     gap: 20px;
@@ -147,6 +173,7 @@ h2 {
     text-align: center;
 }
 
+/* Contact Info */
 .contact-info a {
     color: var(--accent-color);
     text-decoration: none;
@@ -154,7 +181,7 @@ h2 {
 
 .contact-info a:hover {
     text-decoration: underline;
-    color:#00c3ff
+    color: #00c3ff;
 }
 
 /* Footer */
@@ -165,17 +192,13 @@ footer {
     padding: 20px 0;
 }
 
-.social-icons a {
-    color: var(--text-color);
-    margin: 0 10px;
-    font-size: 1.2rem;
-}
 
+/* Theme Toggle */
 .theme-toggle {
     position: fixed;
     top: 10px;
     right: 20px;
-    z-index: 999; /* Brings it to the front */
+    z-index: 999;
 }
 
 .theme-toggle i {
@@ -184,7 +207,14 @@ footer {
     cursor: pointer;
     margin-left: 10px;
 }
-/* Certifications & Experience Section */
+
+.social-icons a {
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+/* Certifications & Experience */
 .certifications-container li,
 .experience-container li {
     background-color: var(--skill-bg);
@@ -204,9 +234,11 @@ footer {
     background-color: var(--accent-color);
     color: white;
 }
+
 .project-container {
     transition: all 0.3s ease-in-out;
 }
+
 html {
     scroll-behavior: smooth;
 }
