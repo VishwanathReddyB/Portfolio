@@ -1,7 +1,7 @@
 @media (max-width: 768px) {
     .minimal-header {
         flex-direction: column;
-        padding: 15px 5%;
+        padding: 10px 5%;
     }
 
     nav ul {
