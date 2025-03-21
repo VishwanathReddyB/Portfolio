@@ -1,44 +1,116 @@
-/* Hide menu toggle by default */
-.menu-toggle {
+#menuToggle {
     display: none;
 }
 
-/* Mobile View */
+
+
+/* Mobile Navigation */
 @media (max-width: 768px) {
-    /* Show menu toggle only in mobile */
-    .menu-toggle {
+    #menuToggle {
         display: block;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--text-color);
-        position: absolute;
+        position: fixed;
         top: 50px;
         right: 20px;
-        z-index: 1100;
+        z-index: 1001;
     }
 
-    /* Hide menu by default */
-    .nav-links {
-        display: none; /* FIX: Initially hidden */
-        flex-direction: column;
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Hide checkbox */
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
         position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: var(--base-variant);
-        padding: 10px;
-        text-align: center;
-        z-index: 1000;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
     }
 
-    /* Show menu when toggled */
-    .nav-links.show {
-        display: flex; /* FIX: Show when active */
+    /* Hamburger icon */
+    #menuToggle span {
+        display: block;
+        width: 25px;
+        height: 4px;
+        margin-bottom: 5px;
+        background: var(--text-color);
+        border-radius: 3px;
+        transition: transform 0.5s ease, background 0.5s ease, opacity 0.3s ease;
+    }
+
+    /* Rotate bars when menu is open */
+    #menuToggle input:checked ~ span:first-child {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+    }
+
+    /* Menu Styles */
+    #menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70vw;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--base-variant);
+        padding-top: 80px;
+        box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        padding: 5px;
+        font-size: 20px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        display: block;
+        width: 80%;
+        transition: color 0.3s ease, background 0.3s ease;
+        padding: 10px 0;
+    }
+
+    .nav-links a:hover {
+        color: var(--secondary-text);
+        background: var(--accent-color);
+    }
+
+    /* Slide in menu when checked */
+    #menuToggle input:checked ~ ul {
+        transform: translateX(0);
     }
 }
 
+  
 
 /* Theme Variables */
 :root {

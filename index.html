@@ -11,18 +11,38 @@
 <body>
     <header class="minimal-header">
         <h1 class="logo">Vishwanath Reddy B</h1>
-        <button class="menu-toggle">☰</button>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+       
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+          
+              <!-- Hamburger icon -->
+              <span></span>
+              <span></span>
+              <span></span>
+          
+              <!-- Navigation Menu -->
+              <ul id="menu" class="nav-links">
+                <li><label for="menuCheckbox"><a href="#about">About</a></label></li>
+                <li><label for="menuCheckbox"><a href="#skills">Skills</a></label></li>
+                <li><label for="menuCheckbox"><a href="#projects">Projects</a></label></li>
+                <li><label for="menuCheckbox"><a href="#certifications">Certifications</a></label></li>
+                <li><label for="menuCheckbox"><a href="#experience">Experience</a></label></li>
+                <li><label for="menuCheckbox"><a href="#contact">Contact</a></label></li>
+              </ul>
+            </div>
+          
+            <!-- Desktop Navigation (Visible Only on Larger Screens) -->
+            <ul class="desktop-nav">
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-        
+          </nav>
+          
         <div class="theme-toggle">
             <i class="fas fa-sun" id="light-mode" style="display: none;"></i>
             <i class="fas fa-moon" id="dark-mode"></i>
