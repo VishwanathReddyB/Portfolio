@@ -8,7 +8,7 @@ Welcome to my GitHub portfolio! I'm an Electronics and Communication Engineering
 🎓 **Education**: B.E. in Electronics & Communication Engineering  
 📍 **Location**: Bengaluru, India  
 📅 **Graduation**: May 2025  
-📈 **CGPA**: 8.81
+📈 **CGPA**: 8.85
 
 ---
 
